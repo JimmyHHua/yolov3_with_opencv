@@ -21,7 +21,7 @@ cd yolov3-with-opencv
 
   <img src="capture/wall2.png" width=700>
 
-- **检测视频目标：**视频下载-->[百度云](https://pan.baidu.com/s/1o6-AuGAy2RS1I5mYStnTug)
+- **检测视频目标：** 视频下载-->[百度云](https://pan.baidu.com/s/1o6-AuGAy2RS1I5mYStnTug)
 
   <img src="capture/wall1.png" width=700>
   
