@@ -1,4 +1,4 @@
-1.下载或者clone文件，进入命令行运行getModels.sh 获取模型参数。
+﻿1.下载或者clone文件，进入命令行运行getModels.sh 获取模型参数。
 ```bash
 git cloen https://github.com/JimmyHHua/yolov3-with-opencv.git
 cd yolov3-with-opencv
@@ -23,9 +23,9 @@ cd yolov3-with-opencv
 
 - 检测视频目标：
 
-  ![video](capture/wall1.jpg)
+  ![video](capture/wall1.png)
 
-  ![video](capture/wall2.jpg)
+  ![video](capture/wall2.png)
 
   视频下载-->[百度云](https://pan.baidu.com/s/1o6-AuGAy2RS1I5mYStnTug)
 
