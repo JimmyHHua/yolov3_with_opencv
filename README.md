@@ -19,13 +19,13 @@ cd yolov3-with-opencv
 3.结果如下：
 - 检测单个图片：
 
-	![dog](demo/dog_yolo_out_py.jpg)
+  <img src="capture/wall2.png" width=700>
 
 - 检测视频目标：
 
-  <img src="capture/wall1.png" width=800>
+  <img src="capture/wall1.png" width=700>
 
-  <img src="capture/wall2.png" width=800>
+  <img src="capture/wall2.png" width=700>
 
 
   视频下载-->[百度云](https://pan.baidu.com/s/1o6-AuGAy2RS1I5mYStnTug)
