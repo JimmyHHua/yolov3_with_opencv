@@ -39,7 +39,15 @@ def getOutputsNames(net):
     # Get the names of all the layers in the network
     layersNames = net.getLayerNames()
     # Get the names of the output layers, i.e. the layers with unconnected outputs
-    return [layersNames[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+    # return [layersNames[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+    # In some OpenCV versions, getUnconnectedOutLayers() returns a list of int, in others, a list of numpy arrays
+    unconnectedOutLayers = net.getUnconnectedOutLayers()
+    if isinstance(unconnectedOutLayers[0], np.ndarray):
+        # OpenCV version returns indices as numpy arrays
+        return [layersNames[i[0] - 1] for i in unconnectedOutLayers]
+    else:
+        # OpenCV version returns indices as integers
+        return [layersNames[i - 1] for i in unconnectedOutLayers]
 
 # Draw the predicted bounding box
 def drawPred(classId, conf, left, top, right, bottom):
@@ -92,7 +100,8 @@ def postprocess(frame, outs):
     # lower confidences.
     indices = cv.dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold)
     for i in indices:
-        i = i[0]
+        if isinstance(i, np.ndarray):
+            i = i[0]
         box = boxes[i]
         left = box[0]
         top = box[1]
